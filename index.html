@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard | Index</title>
+  <style>
+    :root{
+      --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af;
+      --btn-2024:#2563eb; --btn-2025:#10b981; --ring:#22d3ee;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 80% -20%, #0b1228 0%, var(--bg) 60%) no-repeat, var(--bg);
+      color:var(--text); display:grid; place-items:center;
+    }
+    .container{
+      width:min(950px, 92vw); padding:28px; border-radius:16px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 10px 30px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.06);
+      backdrop-filter: blur(8px);
+    }
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:20px;}
+    .title{display:flex; align-items:center; gap:12px;}
+    .logo{width:40px; height:40px; border-radius:10px; background:linear-gradient(135deg, #22d3ee, #6366f1); box-shadow:0 4px 14px rgba(99,102,241,0.45);}
+    h1{font-size:22px; margin:0}
+    p.muted{margin:0; color:var(--muted)}
+    .grid{display:grid; grid-template-columns:1fr; gap:16px; margin-top:8px;}
+    @media (min-width:560px){ .grid{grid-template-columns:1fr 1fr;} }
+    a.card{
+      text-decoration:none; color:inherit; display:block; border-radius:14px; padding:22px; position:relative; overflow:hidden;
+      border:1px solid rgba(255,255,255,0.08);
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+    a.card:hover{ transform: translateY(-2px); border-color: rgba(34,211,238,0.5); box-shadow: 0 12px 26px rgba(34,211,238,0.15); }
+    .badge{ display:inline-block; font-weight:600; letter-spacing:.3px; padding:8px 12px; border-radius:999px; font-size:13px; color:white; box-shadow: inset 0 -1px 0 rgba(0,0,0,.2), 0 6px 14px rgba(0,0,0,.25); }
+    .b2024{ background: linear-gradient(135deg, var(--btn-2024), #7c3aed); }
+    .b2025{ background: linear-gradient(135deg, var(--btn-2025), #06b6d4); }
+    .card h2{ margin:12px 0 8px; font-size:20px }
+    .card p{ margin:0; color:var(--muted) }
+    .glow{ position:absolute; inset:auto -20% -40% auto; width:60%; height:140px; filter: blur(48px); opacity:.18; pointer-events:none; background: radial-gradient(closest-side, #22d3ee, transparent 70%); transform: rotate(-12deg); }
+    a:focus-visible{ outline:none; box-shadow:0 0 0 3px rgba(34,211,238,0.6); border-color:var(--ring); }
+    footer{ margin-top:18px; font-size:12px; color:var(--muted); text-align:center }
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <header>
+      <div class="title">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>INFORMACION RECAUDACION CHONTAPUNTA</h1>
+          <p class="muted">Selecciona el año de reportes</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="grid" aria-label="Accesos a reportes por año">
+      <a class="card" href="reportes-2024.html" aria-label="Ir a Reportes 2024">
+        <span class="badge b2024">Reportes 2024</span>
+        <h2>Reportes 2024</h2>
+        <p>Entrar al panel con categorías: Partes, Depósitos y Lotes.</p>
+        <div class="glow"></div>
+      </a>
+
+      <a class="card" href="reportes-2025.html" aria-label="Ir a Reportes 2025">
+        <span class="badge b2025">Reportes 2025</span>
+        <h2>Reportes 2025</h2>
+        <p>Entrar al panel con categorías: Partes, Depósitos y Lotes.</p>
+        <div class="glow"></div>
+      </a>
+    </section>
+
+    <footer>© 2025</footer>
+  </main>
+</body>
+</html>

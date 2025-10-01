@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reportes 2025</title>
+  <style>
+    :root{
+      --bg:#0f172a; --text:#e5e7eb; --muted:#9ca3af; --ring:#22d3ee;
+      --c1:#2563eb; --c2:#f59e0b; --c3:#8b5cf6;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Helvetica,Arial,sans-serif;
+      background: radial-gradient(1200px 600px at 80% -20%, #0b1228 0%, var(--bg) 60%) no-repeat, var(--bg);
+      color:var(--text); display:grid; place-items:center; padding:20px;
+    }
+    .container{
+      width:min(900px, 94vw); padding:26px; border-radius:16px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 10px 30px rgba(0,0,0,0.45), inset 0 1px 0 rgba(255,255,255,0.06);
+      backdrop-filter: blur(8px);
+    }
+    header{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px;}
+    .back{
+      text-decoration:none; color:var(--text); font-size:14px; opacity:.85;
+      border:1px solid rgba(255,255,255,0.1); padding:8px 12px; border-radius:10px;
+    }
+    .back:hover{opacity:1; border-color:rgba(34,211,238,0.5)}
+    h1{margin:0; font-size:22px}
+    p.muted{margin:4px 0 0; color:var(--muted)}
+    .grid{display:grid; grid-template-columns:1fr; gap:16px; margin-top:8px;}
+    @media(min-width:660px){ .grid{grid-template-columns:repeat(3, 1fr);} }
+    a.btn{
+      display:flex; flex-direction:column; gap:10px; text-decoration:none; color:white;
+      padding:20px; border-radius:14px; min-height:120px;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow: inset 0 -1px 0 rgba(0,0,0,.25), 0 8px 20px rgba(0,0,0,.25);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, filter .18s ease;
+    }
+    a.btn:hover{ transform: translateY(-2px); filter:saturate(1.1); border-color: rgba(34,211,238,0.5); }
+    .btn h2{ margin:0; font-size:18px }
+    .btn p{ margin:0; opacity:.9 }
+    .partes{ background: linear-gradient(135deg, var(--c1), #1e3a8a); }
+    .depositos{ background: linear-gradient(135deg, var(--c2), #b45309); }
+    .lotes{ background: linear-gradient(135deg, var(--c3), #6d28d9); }
+    a:focus-visible{ outline:none; box-shadow:0 0 0 3px rgba(34,211,238,0.6); border-color:var(--ring); }
+    footer{ margin-top:18px; font-size:12px; color:var(--muted); text-align:center }
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <header>
+      <div>
+        <h1>Reportes 2025</h1>
+        <p class="muted">Selecciona una categoría</p>
+      </div>
+      <a class="back" href="index.html" aria-label="Volver al inicio">← Volver</a>
+    </header>
+
+    <section class="grid" aria-label="Categorías de reportes 2025">
+      <a class="btn partes" href="https://tu-dominio.com/partes-2025" target="_blank" rel="noopener noreferrer" aria-label="Partes 2025">
+        <h2>Partes</h2>
+        <p>Reporte de partes 2025</p>
+      </a>
+      <a class="btn depositos" href="https://tu-dominio.com/depositos-2025" target="_blank" rel="noopener noreferrer" aria-label="Depósitos 2025">
+        <h2>Depósitos</h2>
+        <p>Reporte de depósitos 2025</p>
+      </a>
+      <a class="btn lotes" href="https://tu-dominio.com/lotes-2025" target="_blank" rel="noopener noreferrer" aria-label="Lotes 2025">
+        <h2>Lotes</h2>
+        <p>Reporte de lotes 2025</p>
+      </a>
+    </section>
+
+    <footer>© 2025</footer>
+  </main>
+</body>
+</html>
